@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jakhongir Akfa Kosonsoy</title>
+  <meta name="description" content="Akfa oynalar va eshiklar — turlari, materiallari va kv (m²) bo'yicha narxlari. +998916413501" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Jakhongir Akfa Kosonsoy</h1>
+        <p class="sub">Akfa oynalar va eshiklar — sifatli va ishonchli</p>
+      </div>
+
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-close" id="navClose" aria-label="Yopish">✕</button>
+        <ul>
+          <li><a href="#products">Mahsulotlar</a></li>
+          <li><a href="#calculator">Kalkulyator</a></li>
+          <li><a href="#about">Biz haqimizda</a></li>
+          <li><a href="#contacts">Bog'lanish</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="phone" href="tel:+998916413501">+998 91 641 35 01</a>
+        <button class="btn-telegram" id="openTelegram">
+          Telegramga yozish
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menyu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h2>Oynalar va eshiklar — turli material va narxlar</h2>
+          <p>Mahsulotlarni tanlang, kv bo‘yicha hisoblang va to‘g‘ridan-to‘g‘ri Telegram orqali buyurtma yuboring.</p>
+          <div class="hero-cta">
+            <a href="#products" class="btn">Mahsulotlarga o'tish</a>
+            <a href="#calculator" class="btn outline">Kalkulyator</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Inline SVG illustration as placeholder -->
+          <svg width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="120" height="160" rx="6" fill="#f0f6ff" stroke="#2b6eff"/>
+            <rect x="150" y="10" width="120" height="80" rx="6" fill="#fff7ed" stroke="#ff8c00"/>
+            <rect x="150" y="105" width="120" height="65" rx="6" fill="#f3fff0" stroke="#22c55e"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container products-section">
+      <h3>Mahsulotlar</h3>
+      <p class="muted">Turli turdagi Akfa oyna va eshiklar — material, ishlab chiqarish va sifatga qarab narxlar (so'm / m²)</p>
+
+      <div id="productsGrid" class="products-grid" aria-live="polite">
+        <!-- Products dynamically inserted by script.js -->
+      </div>
+    </section>
+
+    <section id="calculator" class="container calc-section">
+      <h3>Kalkulyator</h3>
+      <p class="muted">Mahsulotni tanlang, m² kiriting va yakuniy narxni hisoblang.</p>
+
+      <div class="calculator">
+        <div class="calc-left">
+          <label for="selectProduct">Mahsulot</label>
+          <select id="selectProduct"></select>
+
+          <label for="inputArea">Maydon (m²)</label>
+          <input id="inputArea" type="number" min="0" step="0.1" placeholder="Misol: 2.5" />
+
+          <label for="selectMaterial">Material</label>
+          <select id="selectMaterial"></select>
+
+          <div class="calc-actions">
+            <button id="calcBtn" class="btn">Hisoblash</button>
+            <button id="addToEstimate" class="btn outline">Taxminiy Buyurtmaga Qo'shish</button>
+          </div>
+        </div>
+
+        <div class="calc-right">
+          <h4>Natija</h4>
+          <div class="result-card">
+            <p id="resultText">Hech narsa hisoblanmadi</p>
+            <p class="total" id="resultTotal"></p>
+          </div>
+
+          <div class="estimate">
+            <h4>Buyurtma (Taxminiy)</h4>
+            <div id="estimateList"></div>
+            <p class="estimate-total">Jami: <span id="estimateTotal">0</span> so'm</p>
+            <div class="estimate-actions">
+              <button id="sendTelegram" class="btn">Telegram orqali yuborish</button>
+              <a id="callLink" class="btn outline" href="tel:+998916413501">Qo'ng'iroq qilish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about-section">
+      <h3>Biz haqimizda</h3>
+      <p>Jakhongir Akfa Kosonsoy — mintaqadagi Akfa (PVC) oynalar va eshiklar ishlab chiqaruvchisi. Biz turli material va profil turlarini taklif etamiz: standart, izolyatsiyalangan va premium yechimlar. Narxlar m² (kvadrat metr) asosida belgilanadi.</p>
+    </section>
+
+    <section id="contacts" class="container contacts-section">
+      <h3>Bog'lanish</h3>
+      <p>Telefon: <a href="tel:+998916413501">+998 91 641 35 01</a></p>
+      <p>Telegram: <button class="linkish" id="telegramChat">Telegramga yozish</button></p>
+      <p>Manzil: Kosonsoy (namuna)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jakhongir Akfa Kosonsoy — Barcha huquqlar himoyalangan.</p>
+      <p class="small-muted">Iltimos, mahsulotlarni tanlashda aniq o'lchovlar va materialni yozib yuboring.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
