@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rasmlarni boshqarish — Jakhongir Akfa</title>
+  <meta name="description" content="Mahsulot rasmlarini yuklash yoki URL orqali qo'shish. Rasmlar brauzer localStorage ga saqlanadi." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="mobile-header">
+    <div class="mobile-brand">Rasmlar — Jakhongir Akfa</div>
+    <div style="margin-left:auto">
+      <a href="index.html" class="btn">Bosh sahifaga</a>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px;">
+    <h1>Mahsulot rasmlarini boshqarish</h1>
+    <p class="muted">Har bir mahsulot uchun rasm yuklang (fayl) yoki rasm URL kiriting. Saqlash brauzer localStorage ga joylab qo'yadi — sahifani yangilashdan keyin asosiy sahifada ko'rinadi.</p>
+
+    <div id="imagesList"></div>
+
+    <div style="margin-top:18px;display:flex;gap:8px">
+      <button id="saveAll" class="btn">Hammasini saqlash</button>
+      <button id="resetAll" class="btn outline">Defaultga qaytarish</button>
+    </div>
+
+    <footer style="margin-top:28px">
+      <a href="index.html">← Bosh sahifaga qaytish</a>
+    </footer>
+  </main>
+
+  <script src="images.js" defer></script>
+</body>
+</html>
